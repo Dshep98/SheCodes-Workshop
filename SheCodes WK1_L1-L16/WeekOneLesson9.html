@@ -1,4 +1,4 @@
-<!--This lesson focuses on building on from previous code but applying the HTML classes-->
+<!--This lesson focuses on building on from previous code but applying more CSS Properties-->
 <!DOCTYPE html>
 <html lang="en">
 <!--The heading is working in the background its what the user can't see.-->
@@ -15,21 +15,41 @@
             font-weight: 100;
             font-family: 'Times New Roman';
             font-size: 48px;
-            color: blue;
+            color: purple;
+            text-align: center;
 
 
         }
     </style>
     <!--This is the start of changing the colors of each html class-->
     <style>
-        .Texas{
+        .Texas {
             color: blue;
         }
-        .California{
+
+        .California {
             color: red;
         }
-        .NewYork{
+
+        .NewYork {
             color: green;
+        }
+
+    </style>
+    <style>
+        h2 {
+
+            font-weight: bold;
+            font-family: 'Times New Roman';
+            font-size: 40px;
+            color: green;
+            text-align: center;
+
+
+        }
+        p{
+            font-weight: bold;
+            font-size: 25;
         }
     </style>
 
@@ -37,15 +57,17 @@
 
 <body>
     <h1>
-        SheCodes
+        <strong>
+            SheCodes
+        </strong>
+        
     </h1>
+    <h2>
+        Coding Workshop
+    </h2>
     <h3>
         <ul>
-            <!--PROBLEM: I'm not entirley sure if this is accurate  becuase the bullet points are supposed to be black 
-            but the text is supposed to be the colors of blur,red, and green-->
-            <!--sOLUTION: Nevermind its been fixed after watching the soulution video. i just incorporate the
-            class with the link-->
-            <li >
+            <li>
                 <a href="https://www.shecodes.io/workshops" target="_blank" class="Texas">
                     Coders
                 </a>
@@ -62,9 +84,9 @@
         </ul>
     </h3>
     <hr />
-    <h2>
+    <p>
         More Info
-    </h2>
+    </p>
     <img src="https://www.ups.com/assets/resources/images/knowledge-center/934x495/m10-934x495-why-we-need-more-black-women-in-stem-leadership.jpg"
         width="300" />
 </body>
