@@ -1,0 +1,156 @@
+<!--Working on overriding the default CSS Selectors with the inspector-->
+<!DOCTYPE html>
+<html lang="en">
+  <!--The heading is working in the background its what the user can't see.-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This names the tab thats being used in web browser-->
+    <title>SheCodes</title>
+
+    <!--ELEMENTS-->
+
+    <!--CSS Selectors-->
+    <!--Override the default CSS Selectors-->
+    <style>
+      body {
+        background-color: #f6f2fe;
+      }
+      h1 {
+        text-decoration: underline;
+        font-weight: 100;
+        font-family: "Times New Roman";
+        font-size: 48px;
+        color: #885df1;
+        text-align: center;
+      }
+      h2 {
+        font-weight: normal;
+        font-family: "Times New Roman";
+        font-size: 40px;
+        color: #272044;
+        text-align: center;
+      }
+      button {
+        display: block;
+        color: #885df1;
+        font-size: 18px;
+        background: transparent;
+        margin: 0 auto 20px auto;
+        border: 1px solid #885df1;
+        border-radius: 100px;
+        box-shadow: -1px 5px 10px #885df1;
+        padding: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: #885df1;
+        color: white;
+        cursor: pointer;
+      }
+      p {
+        font-weight: bold;
+        font-size: 25;
+        text-align: center;
+      }
+      img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+      }
+      ul {
+        list-style-type: none;
+      }
+      h3 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: normal;
+      }
+    </style>
+
+    <!--CLASSES-->
+
+    <!--These are being updated using HEX & RGB Syntax-->
+    <!--Here I added padding to help with spacing and used the text-decoration to remove the undeline.
+        Then i implemented the hover, so that whenever the mouse is hover over the link the underline comes back-->
+    <style>
+      a.Texas {
+        color: blue;
+        padding: 15px 7px 20px;
+        text-decoration: none;
+      }
+      a.California {
+        color: red;
+        padding: 10px 25px 20px;
+        text-decoration: none;
+      }
+      a.NewYork {
+        color: green;
+        padding: 10px 25px 25px;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <!--Begins the body of text that the user can see-->
+  <body>
+    <!--TITLE-->
+    <h1>
+      <strong> SheCodes </strong>
+    </h1>
+    <!--Subtitle-->
+    <!--Override the boldness of the subtitle-->
+    <h2>Coding Workshop</h2>
+
+    <!--ADDING A BUTTON that doesn't go anywhere yet-->
+    <button>Apply Now</button>
+
+    <!--Initally LISTED BULLET POINTS-->
+    <!--They will be updated to be used without the bullet points and will be centerd side by side
+        on one line-->
+    <h3>
+      <p2>
+        <ul>
+          <li>
+            <a
+              href="https://www.shecodes.io/workshops"
+              target="_blank"
+              class="Texas"
+            >
+              Coders
+            </a>
+
+            <a
+              href="https://www.shecodes.io/workshops"
+              target="_blank"
+              class="California"
+            >
+              Courses
+            </a>
+
+            <a
+              href="https://www.shecodes.io/stories "
+              target="_blank"
+              class="NewYork"
+            >
+              Stories
+            </a>
+          </li>
+        </ul>
+      </p2>
+    </h3>
+    <!--Produces a new line-->
+    <hr />
+    <!--Starts a paragraph-->
+    <p>
+      <strong> More Info </strong>
+    </p>
+    <img
+      src="https://www.ups.com/assets/resources/images/knowledge-center/934x495/m10-934x495-why-we-need-more-black-women-in-stem-leadership.jpg"
+      width="300"
+    />
+  </body>
+</html>
