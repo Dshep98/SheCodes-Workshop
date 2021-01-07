@@ -1,0 +1,145 @@
+<!--This lesson focuses on building on from previous code but applying CSS Psuedo Selectors. -->
+<!--NOTE: Three new things were introduced here- Hover,Tansition, Ease-->
+<!--Hover- It allow text or a button to change colors when the cursor or mouse hovers over it
+    Transition: Is the amount of time it takes for the hover to happen as the mouse moves on/off of it.
+    Ease: ties in with transition it displays the smoothness of how the transition happens.-->
+<!DOCTYPE html>
+<html lang="en">
+  <!--The heading is working in the background its what the user can't see.-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This names the tab thats being used in web browser-->
+    <title>SheCodes</title>
+
+    <!--EVERYTHING NEEDS TO BE ORDERED BY HIEARCHY START WITH ELEMENTORS THEN TO CLASSES-->
+
+    <!--ELEMENTS-->
+
+    <!--This is the start of CSS Selectors-->
+    <!--The colors here are being updated using HEX Syntax instead of psuedo colors-->
+    <!--For the paragraph and image code the text/ photo is being centered with the display block & margin-->
+    <!-- Added a button to center of page.-->
+    <!--Added a hover,transition,ease, and a change in cursor over the button-->
+    <style>
+      body {
+        background-color: #f6f2fe;
+      }
+      h1 {
+        text-decoration: underline;
+        font-weight: 100;
+        font-family: "Times New Roman";
+        font-size: 48px;
+        color: #885df1;
+        text-align: center;
+      }
+      h2 {
+        font-weight: bold;
+        font-family: "Times New Roman";
+        font-size: 40px;
+        color: #272044;
+        text-align: center;
+      }
+      button {
+        display: block;
+        color: #885df1;
+        font-size: 18px;
+        background: transparent;
+        margin: 0 auto 20px auto;
+        border: 1px solid #885df1;
+        border-radius: 100px;
+        box-shadow: -1px 5px 10px #885df1;
+        padding: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: #885df1;
+        color: white;
+        cursor: pointer;
+      }
+      p {
+        font-weight: bold;
+        font-size: 25;
+        text-align: center;
+      }
+      img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+
+    <!--CLASSES-->
+
+    <!--These are being updated using HEX & RGB Syntax-->
+    <style>
+      .Texas {
+        color: blue;
+      }
+
+      .California {
+        color: red;
+      }
+
+      .NewYork {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <!--Begins the body of text that the user can see-->
+  <body>
+    <!--TITLE-->
+    <h1>
+      <strong> SheCodes </strong>
+    </h1>
+    <!--Subtitle-->
+    <h2>Coding Workshop</h2>
+
+    <!--ADDING A BUTTON that doesn't go anywhere yet-->
+    <button>Apply Now</button>
+
+    <!--LISTED BULLET POINTS-->
+    <h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.shecodes.io/workshops"
+            target="_blank"
+            class="Texas"
+          >
+            Coders
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.shecodes.io/workshops"
+            target="_blank"
+            class="California"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.shecodes.io/stories "
+            target="_blank"
+            class="NewYork"
+          >
+            Stories
+          </a>
+        </li>
+      </ul>
+    </h3>
+    <!--Produces a new line-->
+    <hr />
+    <!--Starts a paragraph-->
+    <p>
+      <strong> More Info </strong>
+    </p>
+    <img
+      src="https://www.ups.com/assets/resources/images/knowledge-center/934x495/m10-934x495-why-we-need-more-black-women-in-stem-leadership.jpg"
+      width="300"
+    />
+  </body>
+</html>
