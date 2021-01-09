@@ -1,9 +1,13 @@
-<!--Week 2: Java Script: IF-ELSE STATEMENTS-->
-<!--
-Ask for the current hour: (i.e 14)
-If it’s before 12, alert Good morning,
-If it’s after 18, Good evening
-If it's between 12 and 18 Good afternoon-->
+<!--Week 2: Java Script: LOGICAL STATEMENTS-->
+<!--Ask for "What country are you from?" in a prompt
+Alert ‘You speak Portuguese’ if you are from Brazil or Portugal
+Alert ‘You don't speak Portuguese’ otherwise
+Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc-->
+
+<!--String Instance methods were introduced: .trim()-which is used to trim the white empty space anywhere
+.replace()-used to switch out different strings
+.tolocalelowercase()-used to check for lower or capital letters-->
+<!-- Linked Used:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,9 +63,7 @@ If it's between 12 and 18 Good afternoon-->
       }
     </style>
   </head>
-  <!--All JAVASCIRPT goes at the bottom right before the body closes.-->
-  <!--Time below is based on a 24 hour format. Morning: 01am-11am 
-    Afternoon/Evening: 12 noon, 13:oopm -12 midnight-->
+
   <body>
     <section>
       <h1>👩‍💻 She Codes is a Coding Workshop for Women</h1>
@@ -75,15 +77,14 @@ If it's between 12 and 18 Good afternoon-->
       <button>Apply Now</button>
     </section>
     <script>
-      let hour = prompt("What is the current hour?⏰ ");
-      if (hour < 12) {
-        alert("Good Morning!🌄");
-      }
-      if (hour > 18) {
-        alert("Good Evening! 🌆");
-      }
-      if (hour > 12 && hour < 18) {
-        alert("Afternoon!");
+      let country = prompt("Where are you from?");
+      country = country.toLocaleLowerCase();
+      country = country.trim();
+      country = country.replace("brasil", "brazil");
+      if (country === "brazil" || country === "portugal") {
+        alert("You speak Portuguese!");
+      } else {
+        alert("You don't speak Portuguese.");
       }
     </script>
   </body>
