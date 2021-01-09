@@ -20,37 +20,112 @@
       h1 {
         color: rgb(26, 100, 214);
         text-align: center;
-        font-size: 40px;
+        font-size: 34px;
+        margin: 0px;
       }
       h2 {
+        color: rgb(26, 100, 214);
+        text-align: center;
+        font-size: 36px;
+        margin: 0px;
+      }
+      h3 {
         color: black;
         font-weight: normal;
         font-size: 34px;
         text-align: center;
+        margin: 4px;
       }
-      img {
+      h4 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.17em;
+      }
+      h5 {
+        font-style: monospace;
+        font-weight: normal;
+        text-align: center;
+      }
+      p {
+        color: #adaba3;
+        font-size: 18px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin: 0;
+        padding: 15px 30px;
+      }
+      li:hover {
+        background: #fffbef;
+        opacity: 1;
+      }
+      button {
         display: block;
-        margin: 0 auto;
-        background: transparent;
-        background-size: 100px;
-        width: 75px;
-        height: 75px;
+        font-size: 18px;
+        background: rgb(26, 100, 214);
+        margin: 0 auto 20px auto;
+        border: 1px solid rgb(26, 100, 214);
+        border-radius: 100px;
+        padding: 20px;
+        color: white;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: rgb(26, 100, 214);
+        cursor: pointer;
       }
     </style>
 
     <!--CLASSES-->
+    <style>
+      a.Snacks {
+        font-weight: bold;
+        color: black;
+      }
+      a.Sky {
+        color: black;
+        font-weight: bold;
+      }
+      a.Sunny {
+        font-weight: bold;
+        color: #fce100;
+      }
+    </style>
   </head>
-
+  <!--1. Added the image then made the 1st/2nd header
+    2.Added a ul but removed the bullets and put each one vertically-->
   <body>
-    <img
-      src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/sun-behind-small-cloud.png"
-      alt="cloud with the sun hidden behind it"
-    />
-    <h1>Currently 21° in Tokyo</h1>
+    <h1>🌤</h1>
+    <h2>
+      <strong> Currently 21° in Tokyo </strong>
+    </h2>
 
-    <h2>13° <strong>/ 23° </strong></h2>
+    <h3>13° <strong>/ 23° </strong></h3>
 
-    <br />
-    <br />
+    <h4>
+      <ul>
+        <li>
+          <a class="Snacks"> 🌧 Tomorrow </a>
+          <br />
+          <p>10° <strong> / 22° </strong></p>
+        </li>
+        <li>
+          <a class="Sky"> 🌥 Saturday </a>
+          <br />
+          <p>15° <strong> / 17° </strong></p>
+        </li>
+        <li>
+          <a class="Sunny"> ☀ </a>
+          <strong>Sunday</strong>
+          <br />
+          <p>25° <strong> / 28° </strong></p>
+        </li>
+      </ul>
+    </h4>
+    <button>Change City</button>
+    <h5>Coded by Dominique Shepherd</h5>
   </body>
 </html>
