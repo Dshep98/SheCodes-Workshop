@@ -1,5 +1,4 @@
 <!--Week 2: Java Script: JavaScript Selectors-->
-<!--NEEDS TO BE FIXED-->
 <!--
     NEW TOPICS: 
     - #document- its a page created by js that already loaded in. 
@@ -81,17 +80,25 @@
       <button>Apply Now</button>
     </section>
     <script>
-      function showWeather() {
-        alert("It is 18 degrees");
-      }
-      let element = document.querySelector("li");
-      element.addEventListener("click", showWeather);
+      // function showWeather() {
+      //   alert("It is 18 degrees");
+      // }
+      // let element = document.querySelector("li");
+      // element.addEventListener("click", showWeather);
 
-      function showWeather(event) {
-        event.target.innerHTML = "The weather is currently 19 degrees";
+      // function showWeather(event) {
+      //   event.target.innerHTML = "The weather is currently 19 degrees";
+      // }
+      // let element = document.querySelector("li");
+      // element.addEventListener("click", showWeather);
+      function signUp() {
+        let name = prompt("What's your first name?");
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Thank you! " + name + "  " + "Adios !";
       }
-      let element = document.querySelector("li");
-      element.addEventListener("click", showWeather);
+
+      let signUpButton = document.querySelector("button");
+      signUpButton.addEventListener("click", signUp);
     </script>
   </body>
 </html>
