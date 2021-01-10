@@ -1,13 +1,14 @@
-<!--Week 2: Java Script: LOGICAL STATEMENTS-->
-<!--Ask for "What country are you from?" in a prompt
-Alert ‘You speak Portuguese’ if you are from Brazil or Portugal
-Alert ‘You don't speak Portuguese’ otherwise
-Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc-->
-
-<!--String Instance methods were introduced: .trim()-which is used to trim the white empty space anywhere
-.replace()-used to switch out different strings
-.tolocalelowercase()-used to check for lower or capital letters-->
-<!-- Linked Used:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String -->
+<!--Week 2: Java Script: Functions-->
+<!--
+    Functions - Always go at the top of the javascript so the compiler knows its there before its ran.
+-->
+<!--TASK: 
+     Create a function canSpeakPortuguese
+From inside the function, ask for your country
+ Alert ‘You speak Portuguese’ if from Brazil or Portugal
+Alert ‘Go learn Portuguese!’ otherwise.
+ Call the function
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -77,15 +78,19 @@ Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc-->
       <button>Apply Now</button>
     </section>
     <script>
-      let country = prompt("Where are you from?");
-      country = country.toLowerCase();
-      country = country.trim();
-      country = country.replace("brasil", "brazil");
-      if (country === "brazil" || country === "portugal") {
-        alert("You speak Portuguese!");
-      } else {
-        alert("You don't speak Portuguese.");
+      function canSpeakPortuguese() {
+        let country = prompt("Where are you from?");
+        country = country.toLowerCase();
+        country = country.trim();
+        country = country.replace("brasil", "brazil");
+        if (country === "brazil" || country === "portugal") {
+          alert("You speak Portuguese!");
+        } else {
+          alert("You don't speak Portuguese.");
+        }
       }
+
+      canSpeakPortuguese();
     </script>
   </body>
 </html>
