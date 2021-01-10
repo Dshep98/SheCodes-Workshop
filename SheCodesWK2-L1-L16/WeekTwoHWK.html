@@ -1,0 +1,149 @@
+<!-- Week Two Homework #1 : Remake a weather Webpage with all the tools you learned this past week.-->
+<!--What needs to be done:
+    1. Add Prompts
+    2.First Update Button
+    3.put prompts in functions
+    4.Add in changing emojis based off coldness of hottnes of temp in degrees celsius
+    5.JUST HAVE FUN!!!-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework #2: Weather Add-ons</title>
+
+    <!--ELEMENTS-->
+    <style>
+      h1 {
+        color: rgb(26, 100, 214);
+        text-align: center;
+        font-size: 34px;
+        margin: 0px;
+      }
+      h2 {
+        color: rgb(26, 100, 214);
+        text-align: center;
+        font-size: 36px;
+        margin: 0px;
+      }
+      h3 {
+        color: black;
+        font-weight: normal;
+        font-size: 34px;
+        text-align: center;
+        margin: 4px;
+      }
+      h4 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.17em;
+      }
+      h5 {
+        font-style: monospace;
+        font-weight: normal;
+        text-align: center;
+      }
+      p {
+        color: #adaba3;
+        font-size: 18px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin: 0px 45px 0px 0px;
+        padding: 15px 30px;
+      }
+      li:hover {
+        background: #fffbef;
+        opacity: 1;
+      }
+      button {
+        display: block;
+        font-size: 18px;
+        background: rgb(26, 100, 214);
+        margin: 0 auto 20px auto;
+        border: 1px solid rgb(26, 100, 214);
+        border-radius: 100px;
+        padding: 20px;
+        color: white;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: rgb(26, 100, 214);
+        cursor: pointer;
+      }
+    </style>
+
+    <!--CLASSES-->
+    <style>
+      a.Snacks {
+        font-weight: bold;
+        color: black;
+      }
+      a.Sky {
+        color: black;
+        font-weight: bold;
+      }
+      a.Sunny {
+        font-weight: bold;
+        color: #fce100;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌤</h1>
+    <h2>
+      <strong> Currently 21° in Tokyo </strong>
+    </h2>
+
+    <h3>13° <strong>/ 23° </strong></h3>
+
+    <h4>
+      <ul>
+        <li>
+          <a class="Snacks"> 🌧 Tomorrow </a>
+          <br />
+          <p>10° <strong> / 22° </strong></p>
+        </li>
+        <li>
+          <a class="Sky"> 🌥 Saturday </a>
+          <br />
+          <p>15° <strong> / 17° </strong></p>
+        </li>
+        <li>
+          <a class="Sunny"> ☀ </a>
+          <strong>Sunday</strong>
+          <br />
+          <p>25° <strong> / 28° </strong></p>
+        </li>
+      </ul>
+    </h4>
+    <button>Change City</button>
+    <h5>Coded by Dominique Shepherd</h5>
+    <script>
+      function city_temp() {
+        let city = prompt("What city do you live in?");
+        let temp = prompt("What is the temperature? ");
+        let h2 = document.querySelector("h2");
+        h2.innerHTML = "Currently " + temp + "°C in " + city;
+        // I put the temp in Fahreheit
+        if (temp >= 85) {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "🥵";
+        } else if (temp >= 55 && temp <= 80) {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "😎";
+        } else {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "🥶";
+        }
+      }
+
+      let changeCitybutton = document.querySelector("button");
+
+      changeCitybutton = addEventListener("click", city_temp);
+    </script>
+  </body>
+</html>
