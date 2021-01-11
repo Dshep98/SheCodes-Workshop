@@ -64,11 +64,11 @@ Java Script(let, if, else, alert, prompt, event)
         display: block;
         margin: auto;
         padding: 2%;
-        border: dotted rgb(252, 225, 0);
+        border: dotted #af0d1a;
         border-radius: 20%;
-        background: #af0d1a;
-        color: rgb(252, 225, 0);
-        box-shadow: 2px 5px 9px #af0d1a;
+        background: rgb(252, 225, 0);
+        color: #af0d1a;
+        box-shadow: 2px 5px 9px #fdfcf6;
         transition: all 150ms ease-in-out;
       }
     </style>
@@ -80,9 +80,10 @@ Java Script(let, if, else, alert, prompt, event)
       }
       button:hover {
         cursor: pointer;
-        background: rgb(252, 225, 0);
-        color: #af0d1a;
-        border: dotted #af0d1a;
+        background: #af0d1a;
+        color: rgb(252, 225, 0);
+        border: dotted rgb(252, 225, 0);
+        box-shadow: 2px 5px 9px rgb(252, 225, 0);
       }
       .Pizza {
         color: rgb(252, 225, 0);
@@ -118,7 +119,13 @@ Java Script(let, if, else, alert, prompt, event)
     </h4>
     <p>
       <strong class="Pizza"> PIZZA DOUGH:<br /></strong>
-      -1/2 recipe Homemade Pizza Dough<br />
+      -1/2 recipe
+      <a
+        href="https://www.queensleeappetit.com/perfect-homemade-pizza-dough/"
+        target="_blank"
+        >Homemade Pizza Dough</a
+      >
+      <br />
       -Cornmeal for sprinkling<br />
       -Olive oil, for brushing<br />
       <strong class="Pizza"> TOPPINGS: <br /></strong> -1/2 recipe Homemade
@@ -137,5 +144,20 @@ Java Script(let, if, else, alert, prompt, event)
     </h5>
     <button>👉Enter the kindgdom of pizza 🍕! To win a FREEEE pizza! 👈</button>
     <h6>Coded by Dominique Shepherd</h6>
+
+    <script>
+      function FavPizza() {
+        let name = prompt("What's Your Name??");
+        alert("Hi ! " + name + "! Welcome to Pizza Kingdom!");
+        let pizzaChoice = prompt("What's your favorite Pizza? 🤔");
+        if (pizzaChoice === "Meat Lovers".toLocaleLowerCase()) {
+          alert("Great Choice! You win a free pizza!!!! 🙌🙌🙌");
+        } else {
+          alert("Nice Choice! No free pizza for you.😢");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", FavPizza);
+    </script>
   </body>
 </html>
