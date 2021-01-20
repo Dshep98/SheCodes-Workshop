@@ -1,0 +1,189 @@
+<!--Project1: INSTRUCTIONS
+Create a landing page from scratch about something 
+you’re passionate about. The page should include a user interaction.
+Things to be added: HTML(h1, h2, p, div, span, strong, em, br, hr, a, img, button)
+CSS(margin, padding, font-size, font-weight, color, background (with linear-gradient), 
+line-height, box-shadow, border, transition)
+Java Script(let, if, else, alert, prompt, event)
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍕Pizza Woohoo!</title>
+    <!--ELEMENTS-->
+    <style>
+      title:hover {
+        cursor: pointer;
+      }
+      body {
+        background: linear-gradient(180deg, rgb(252, 225, 0), rgb(175, 13, 26));
+      }
+      h1 {
+        text-align: center;
+        font-size: 5em;
+        color: #fdfcf6;
+      }
+      h2 {
+        text-align: center;
+        font-size: 3em;
+        color: #fdfcf6;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin: unset;
+      }
+      h4 {
+        font-size: 24px;
+      }
+      h5 {
+        text-align: center;
+      }
+      h6 {
+        text-align: center;
+        font-family: monospace;
+        font-size: 14px;
+      }
+      img {
+        display: block;
+        margin: auto;
+        width: 30%;
+      }
+      ul {
+        list-style: decimal;
+        padding: 0px 20px;
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      strong {
+        color: #af0d1a;
+      }
+      div {
+        line-height: 1.8;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: #fdfcf6;
+      }
+
+      button {
+        display: block;
+        margin: auto;
+        padding: 2%;
+        border: dotted #af0d1a;
+        border-radius: 20%;
+        background: rgb(252, 225, 0);
+        color: #af0d1a;
+        box-shadow: 2px 5px 9px #fdfcf6;
+        transition: all 150ms ease-in-out;
+      }
+    </style>
+
+    <!--CLASSES-->
+    <style>
+      a:hover {
+        text-decoration: underline;
+      }
+      button:hover {
+        cursor: pointer;
+        background: #af0d1a;
+        color: rgb(252, 225, 0);
+        border: dotted rgb(252, 225, 0);
+        box-shadow: 2px 5px 9px rgb(252, 225, 0);
+      }
+      span.Pizza {
+        color: rgb(252, 225, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>I Love 🍕Pizza !</h1>
+    <h2>Pizza is the most <strong> AWESOMEST</strong> food there is!!!</h2>
+    <h3>
+      Here are three reasons why <strong> PIZZA </strong> is the
+      <strong> BEST</strong> :
+    </h3>
+
+    <ul>
+      <p>
+        <li>Its Delicous !😋</li>
+        <li>Its sooooo delicoius I created a chewing tune for it ! 🎧</li>
+        <li>
+          Here's that tune:
+          <em>
+            🎵 Pizza Pizza its very very yummy , Pizza Pizza its yummy to my
+            tummy🎵
+          </em>
+        </li>
+      </p>
+    </ul>
+
+    <img
+      src="http://veryculinary.com/wp-content/uploads/2017/01/Meat-lovers-pizza.jpg"
+      alt="Meat Lovers Pizza"
+    />
+
+    <hr />
+
+    <h4>
+      Recipe Below for this
+      <strong>
+        <span class="Pizza"> MAGNIFICENT</span>
+      </strong>
+      homemade Meat Lovers Pizza:
+    </h4>
+
+    <div>
+      <p>
+        <strong> <span class="Pizza"> PIZZA DOUGH:</span><br /></strong>
+        -1/2 recipe
+        <a
+          href="https://www.queensleeappetit.com/perfect-homemade-pizza-dough/"
+          target="_blank"
+          >Homemade Pizza Dough</a
+        >
+        <br />
+        -Cornmeal for sprinkling<br />
+        -Olive oil, for brushing<br />
+        <strong> <span class="Pizza"> TOPPINGS:</span> <br /></strong> -1/2
+        recipe Homemade Pizza Sauce (or you can use store-bought) <br />-2 cups
+        shredded mozzarella cheese <br />-1/3 cup shredded parmesan cheese
+        <br />-Pepperoni Slices <br />-1 Ib. Hot Italian Sausage, cooked and
+        crumbled<br />
+        -3-4 slices of crispy bacon, crumbled
+      </p>
+    </div>
+
+    <h5>
+      <a
+        href="https://www.queensleeappetit.com/meat-lovers-pizza/"
+        target="_blank"
+        >Click here</a
+      >
+      for the instructions to make this incredible pizza!
+    </h5>
+
+    <button>👉Enter the kindgdom of pizza 🍕! To win a FREEEE pizza! 👈</button>
+
+    <h6>Coded by Dominique Shepherd</h6>
+
+    <script>
+      function FavPizza() {
+        let name = prompt("What's Your Name??");
+        alert("Hi " + name + "! Welcome to Pizza Kingdom!");
+        let pizzaChoice = prompt("What's your favorite Pizza? 🤔");
+        if (pizzaChoice === "Meat Lovers".toLocaleLowerCase()) {
+          alert("Great Choice! You win a free pizza!!!! 🙌🙌🙌");
+        } else {
+          alert("Nice Choice! But no free pizza for you.😢");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", FavPizza);
+    </script>
+  </body>
+</html>
