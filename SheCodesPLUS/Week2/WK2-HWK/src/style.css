@@ -61,5 +61,5 @@ div.card-body {
   padding: 15px;
   border-radius: 10px;
   width: auto;
-  background: turquoise;
+  background: linear-gradient(to right, #0099f7 0%, #f11712 51%, #0099f7 100%);
 }
